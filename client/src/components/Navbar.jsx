@@ -1,15 +1,30 @@
-
-
-
-
+import { ShoppingCart, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-    return (
-      <div>
-        <h1>Navbar</h1>
+  return (
+    <div className="bg-[#faf8f5] w-full flex justify-around border-b p-4  backdrop-blur sticky top-0 z-50">
+
+      <Link to={"/"}>
+        <h2 className="text-xl font-bold font-serif gradient-text ">
+          Olayinka Furniture Palace
+        </h2>
+      </Link>
+
+      <div className=" hidden md:flex flex-row space-x-8">
+        <Link>Home</Link>
+        <Link>Shop</Link>
+        <Link>About</Link>
+        <Link>Contact</Link>
+        <Link>
+          <ShoppingCart />
+        </Link>
+        <Link>
+          <Users />
+        </Link>
       </div>
-    );
-  }
-  
-  export default Navbar
-  
+    </div>
+  );
+}
+
+export default Navbar;

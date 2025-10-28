@@ -1,15 +1,15 @@
-
-
-
-
+import Navbar from "./Navbar";
 
 function Header() {
-    return (
+  return (
+    <div>
+      <h1>Olayinka Furniture Palace</h1>
+
       <div>
-        <h1>Header</h1>
+        <Navbar />
       </div>
-    );
-  }
-  
-  export default Header
-  
+    </div>
+  );
+}
+
+export default Header;
