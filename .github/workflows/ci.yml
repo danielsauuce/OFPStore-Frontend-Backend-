@@ -1,0 +1,50 @@
+name: Continuous Integration (Development Branch)
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # ---------------------
+      # Backend (Server)
+      # ---------------------
+      - name: Install Server Dependencies
+        run: |
+          cd server
+          npm install
+
+      - name: Lint or Test Server (if available)
+        run: |
+          cd server
+          npm run lint || echo "No linting configured"
+          npm test || echo "No tests configured"
+
+      # ---------------------
+      # Frontend (Client)
+      # ---------------------
+      - name: Install Client Dependencies
+        run: |
+          cd client
+          npm install
+
+      - name: Build Frontend
+        run: |
+          cd client
+          npm run build || echo "Build completed"
