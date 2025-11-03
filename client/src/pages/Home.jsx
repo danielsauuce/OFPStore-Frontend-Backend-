@@ -25,7 +25,7 @@ const Home = () => {
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-balance text-[#31261c]">
               Elevate Your Living Space
             </h1>
-            <p className="text-xl text-muted text-[#31261c] mb-8">
+            <p className="text-xl text-muted text-[#EEEAE4] mb-8">
               Discover timeless furniture pieces crafted with precision and
               passion. Transform your house into a home with our curated
               collections.

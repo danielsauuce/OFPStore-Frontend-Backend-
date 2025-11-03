@@ -9,12 +9,12 @@ import Shop from "./pages/Shop";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 
-
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Auth" element={<AuthPage />} />
+      <Route path="/Shop" element={<Shop />} />
     </Routes>
   );
 }
