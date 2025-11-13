@@ -66,6 +66,7 @@ const Features = () => {
           </p>
         </div>
 
+
         <div>
           <ProductCard products={furnitureItems} />
         </div>
