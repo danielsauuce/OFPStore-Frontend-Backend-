@@ -1,10 +1,9 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-
-export default defineConfig([
-  globalIgnores(["dist"]),
+export default [
   {
+    files: ['**/*.mjs', '**/*.js'],
     rules: {
-      "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
+      semi: 'error',
+      'no-unused-vars': 'warn',
     },
   },
-]);
+];
