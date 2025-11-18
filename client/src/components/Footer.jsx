@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -48,6 +48,34 @@ function Footer() {
                 <Link className="text-muted-foreground hover:text-primary transition-colors">
                   Shopping Cart
                 </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="font-semibold ">Customer Service</h4>
+
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>Shipping & Delivery</li>
+              <li>Returns & Exchange</li>
+              <li>Warranty Information</li>
+              <li>FAQ</li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="font-semibold">Contact Us</h4>
+
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-center space-x-2 text-muted-foreground">
+                <Phone className="h-4 w-4" /> <span>+234 (0) 123 456 7890</span>
+              </li>
+              <li className="flex items-center space-x-2 text-muted-foreground">
+                <Mail className="h-4 w-4" /> <span>info@olayinkafurniture.com</span>
+              </li>
+              <li className="flex items-center space-x-2 text-muted-foreground">
+                <MapPin className="h-4 w-4" />
+                <span>1, Aroworamimo street, Igbo-olomu, Agric Ikorodu, Lagos State, Nigeria.</span>
               </li>
             </ul>
           </div>
