@@ -19,12 +19,18 @@ const About = () => {
               Every piece is carefully crafted using premium materials, ensuring durability, comfort
               and timeless elegance for your home.
             </p>
-            <Link>
-              <button className=''> Learn More About Us</button>
+            <Link to={'/about'}>
+              <button className=""> Learn More About Us</button>
             </Link>
           </div>
 
-          <div></div>
+          <div className="relative h-[400px] rounded-lg overflow-hidden shadow-elegant">
+            <img
+              src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=800&q=80"
+              alt="Furniture craftsmanship"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
