@@ -20,7 +20,7 @@ const About = () => {
               and timeless elegance for your home.
             </p>
             <Link to={'/about'}>
-              <button className=""> Learn More About Us</button>
+              <button className="bg-primary text-foreground p-2 rounded"> Learn More About Us</button>
             </Link>
           </div>
 

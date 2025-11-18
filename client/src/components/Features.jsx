@@ -71,7 +71,6 @@ const Features = () => {
         <Link to={'/Shop'}>
           <div className="text-center mt-12">
             <button className="p-3 bg-[#faf8f5] hover:bg-green-800 hover:text-white shadow">
-              {' '}
               View All Product
             </button>
           </div>
