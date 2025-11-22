@@ -9,7 +9,6 @@ const testimonials = [
     rating: 5,
     comment:
       'The quality and craftsmanship of the furniture exceeded my expectations. Our living room looks absolutely stunning!',
-    avatar: '/images/avatar-sarah.jpg', // optional
   },
   {
     id: 2,
@@ -18,7 +17,6 @@ const testimonials = [
     rating: 4,
     comment:
       'Beautiful pieces with excellent attention to detail. My clients were impressed with how premium everything felt.',
-    avatar: '/images/avatar-michael.jpg',
   },
   {
     id: 3,
@@ -27,23 +25,25 @@ const testimonials = [
     rating: 5,
     comment:
       'The customer service was outstanding, and the furniture fits perfectly with my minimalist style. Highly recommended!',
-    avatar: '/images/avatar-emily.jpg',
   },
 ];
 
 const Testimonials = () => {
-  const testimonial = testimonials;
   return (
-    <section className="py-20 bg-muted/1 ">
+    <section className="py-20 bg-muted">
       <div className="container mx-auto px-4">
+        {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-serif font-bold mb-4"> What Our Customers Says</h2>
-          <p className="text-muted-foreground"> Don't just take our word for it</p>
+          <h2 className="text-4xl font-serif font-bold mb-4 text-foreground">
+            What Our Customers Say
+          </h2>
+          <p className="text-muted-foreground">Don't just take our word for it</p>
         </div>
 
+        {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((item) => (
-            <div key={item.id} className="bg-card p-8 rounded-lg shadow-card hover-lift">
+            <div key={item.id} className="bg-card p-8 rounded-lg shadow-card hover-lift transition">
               <div className="flex items-center gap-1 mb-4">
                 {Array.from({ length: item.rating }).map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-gold text-gold" />
@@ -52,9 +52,11 @@ const Testimonials = () => {
 
               <p className="text-muted-foreground italic mb-6">"{item.comment}"</p>
 
-              <div>
-                <p className="font-semibold">{item.name}</p>
-                <p className="text-sm text-muted-foreground">{item.role}</p>
+              <div className="flex items-center gap-4">
+                <div>
+                  <p className="font-semibold text-foreground">{item.name}</p>
+                  <p className="text-sm text-muted-foreground">{item.role}</p>
+                </div>
               </div>
             </div>
           ))}
