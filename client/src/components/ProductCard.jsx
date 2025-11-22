@@ -33,11 +33,7 @@ const ProductCard = ({ products }) => {
                 Add to Cart
               </button>
             </Link>
-
-            
           </div>
-          
-          
         ))}
       </div>
     </Link>

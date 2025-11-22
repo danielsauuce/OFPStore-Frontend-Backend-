@@ -20,7 +20,7 @@ function Navbar() {
   const [theme, setTheme] = useDarkMode();
 
   return (
-    <nav className="bg-card/95 w-full p-4 backdrop-blur sticky top-0 z-50 shadow">
+    <nav className="bg-card/95 w-full p-4 sticky top-0 z-50 shadow backdrop-blur supports-[backdrop-filter]:bg-card/60">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
@@ -45,17 +45,22 @@ function Navbar() {
 
           {/* Dark Mode Toggle */}
           <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-            {theme === 'dark' ? <Sun size={22} /> : <Moon size={22} />}
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
         </div>
 
-        {/* Mobile Hamburger */}
-        <button
-          className="md:hidden text-[#815331] dark:text-[#e8d9c3]"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {/* Mobile Hamburger + Cart) */}
+        <div className="flex md:hidden items-center space-x-4 text-[#815331] dark:text-[#e8d9c3]">
+          {/* Cart Icon */}
+          <Link to="/cart">
+            <ShoppingCart size={22} />
+          </Link>
+
+          {/* Hamburger */}
+          <button onClick={() => setOpen(!open)}>
+            {open ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -67,7 +72,7 @@ function Navbar() {
             </Link>
           ))}
 
-          <div className="flex space-x-6 pt-2">
+          <div className="flex flex-col space-y-3 pt-2">
             {navIcons.map((item, i) => (
               <Link key={i} to={item.path} onClick={() => setOpen(false)}>
                 {item.icon}

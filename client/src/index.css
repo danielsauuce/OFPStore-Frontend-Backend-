@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* ══════════════════════════════════════
@@ -6,27 +6,27 @@
    ══════════════════════════════════════ */
 @theme {
   /* ── Colors (using HSL because you already designed with HSL) ── */
-  --color-background:         hsl(40 20% 97%);
-  --color-foreground:         hsl(25 30% 15%);
-  --color-card:               hsl(0 0% 100%);
-  --color-card-foreground:    hsl(25 30% 15%);
+  --color-background: hsl(40 20% 97%);
+  --color-foreground: hsl(25 30% 15%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(25 30% 15%);
 
-  --color-primary:            hsl(25 45% 35%);
+  --color-primary: hsl(25 45% 35%);
   --color-primary-foreground: hsl(40 20% 97%);
-  --color-primary-light:      hsl(25 45% 45%);
-  --color-primary-dark:       hsl(25 50% 25%);
+  --color-primary-light: hsl(25 45% 45%);
+  --color-primary-dark: hsl(25 50% 25%);
 
-  --color-secondary:          hsl(40 30% 90%);
-  --color-muted:              hsl(40 15% 92%);
-  --color-muted-foreground:   hsl(25 20% 45%);
+  --color-secondary: hsl(40 30% 90%);
+  --color-muted: hsl(40 15% 92%);
+  --color-muted-foreground: hsl(25 20% 45%);
 
-  --color-border:             hsl(40 20% 85%);
-  --color-accent:             hsl(150 30% 40%);        /* success/green toast */
-  --color-destructive:        hsl(0 72% 51%);         /* error/red */
+  --color-border: hsl(40 20% 85%);
+  --color-accent: hsl(150 30% 40%); /* success/green toast */
+  --color-destructive: hsl(0 72% 51%); /* error/red */
 
   /* ── Fonts ── */
-  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", serif;
-  --font-sans:  "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-serif: 'Playfair Display', ui-serif, Georgia, Cambria, 'Times New Roman', serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 
   /* Optional: you can also expose the raw HSL values if you ever need them in arbitrary values */
   --color-primary-h: 25;
@@ -36,12 +36,12 @@
 
 /* Optional – regular CSS variables (for inline styles or JS) */
 :root {
-  --background:         hsl(40 20% 97%);
-  --foreground:         hsl(25 30% 15%);
-  --primary:            hsl(25 45% 35%);
+  --background: hsl(40 20% 97%);
+  --foreground: hsl(25 30% 15%);
+  --primary: hsl(25 45% 35%);
   --primary-foreground: hsl(40 20% 97%);
-  --primary-dark:       hsl(25 50% 25%);
-  --muted-foreground:   hsl(25 20% 45%);
-  --border:             hsl(40 20% 85%);
-  --accent:             hsl(150 30% 40%);
+  --primary-dark: hsl(25 50% 25%);
+  --muted-foreground: hsl(25 20% 45%);
+  --border: hsl(40 20% 85%);
+  --accent: hsl(150 30% 40%);
 }
