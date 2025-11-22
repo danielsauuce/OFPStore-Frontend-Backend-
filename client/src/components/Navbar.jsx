@@ -12,7 +12,7 @@ const navItems = [
 
 const navIcons = [
   { icon: <ShoppingCart size={18} />, path: '/cart' },
-  { icon: <Users size={18} />, path: '/account' },
+  { icon: <Users size={18} />, path: '/auth' },
 ];
 
 function Navbar() {
