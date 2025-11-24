@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { furnitureItems } from '../data/FurnitureItems';
 
 const Features = () => {
+  const featuresProduct = furnitureItems.slice(0,6)
+
   return (
     <section className="bg-[linear-gradient(180deg,#F8F5EE,#EEE9E0)] py-20">
       <div className="container mx-auto px-4">
@@ -18,7 +20,7 @@ const Features = () => {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {furnitureItems.map((product) => (
+          {featuresProduct.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
