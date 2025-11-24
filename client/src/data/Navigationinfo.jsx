@@ -1,6 +1,6 @@
-import { LayoutDashboard, Package, ShoppingCart, Users, BarChart3, Home } from 'lucide-react';
+import { LayoutDashboard, Package, ShoppingCart, Users, BarChart3 } from 'lucide-react';
 
-export const navigation = [
+export const navigations = [
   { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
   { name: 'Products', href: '/admin/products', icon: Package },
   { name: 'Orders', href: '/admin/orders', icon: ShoppingCart },

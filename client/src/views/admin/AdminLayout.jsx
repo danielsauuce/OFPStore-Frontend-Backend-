@@ -1,9 +1,14 @@
 import { Link, useLocation } from 'react-router-dom';
-import { navigation } from '../../data/Navigationinfo';
+import { navigations } from '../../data/Navigationinfo';
+import { Home } from 'lucide-react';
+import { ReactNode } from 'react';
 
-// const isActive = (path: String) => location.pathname === path;
+// const isActive = (path: string) => location.pathname === path;
 
-const AdminLayout = () => {
+const AdminLayout = ({children}) => {
+  const location = useLocation();
+  const navigation = navigations;
+
   return (
     <div className="min-h-screen bg-muted/30 flex">
       {/* Sidebar */}
@@ -21,23 +26,7 @@ const AdminLayout = () => {
           {/* Sidebar Title */}
           <h2 className="text-xl font-serif font-bold mb-6">Admin Panel</h2>
 
-          {/* Navigation */}
-          <nav className="space-y-2">
-            {navigation.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link key={item.name} to={item.href}>
-                  <div
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer transition-colors
-                      ${isActive(item.href) ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:bg-primary/10 hover:text-primary'}`}
-                  >
-                    <Icon className="h-5 w-5" />
-                    <span>{item.name}</span>
-                  </div>
-                </Link>
-              );
-            })}
-          </nav>
+          
         </div>
       </aside>
 
