@@ -1,9 +1,9 @@
 import User from '../models/user.mjs';
-import generateTokens from '../utils/genereteToken';
-import logger from '../utils/logger';
-import { registerValidation, loginValidation } from '../utils/userValidation';
+import generateTokens from '../utils/generateToken.js';
+import logger from '../utils/logger.js';
+import { registerValidation, loginValidation } from '../utils/userValidation.js';
 
-const registerUser = async (req, res) => {
+export const registerUser = async (req, res) => {
   logger.info('Registration endpoint hit');
 
   try {
@@ -55,7 +55,7 @@ const registerUser = async (req, res) => {
   }
 };
 
-const loginUser = async (req, res) => {
+export const loginUser = async (req, res) => {
   logger.info('Login endpoint hit');
 
   try {

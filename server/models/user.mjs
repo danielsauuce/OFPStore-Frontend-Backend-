@@ -38,9 +38,6 @@ const userSchema = new mongoose.Schema(
   },
 );
 
-// index for faster queries
-userSchema.index({ email: 1 });
-
 userSchema.pre('save', async function (next) {
   if (this.isModified('password')) {
     try {

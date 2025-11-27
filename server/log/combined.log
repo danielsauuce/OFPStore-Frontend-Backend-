@@ -18,3 +18,14 @@
 {"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T21:36:05.625Z"}
 {"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T21:36:09.888Z"}
 {"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T21:36:11.749Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T21:36:45.248Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T21:58:34.030Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T21:58:38.844Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T21:58:42.058Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:00:44.531Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:01:03.950Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:01:08.725Z"}
+{"level":"info","message":"Received POST request to /auth/register","service":"server","timestamp":"2025-11-27T22:08:02.682Z"}
+{"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:08:02.684Z"}
+{"level":"info","message":"Registration endpoint hit","service":"server","timestamp":"2025-11-27T22:08:02.686Z"}
+{"level":"error","message":"Registration error occur","service":"server","timestamp":"2025-11-27T22:08:02.686Z"}
