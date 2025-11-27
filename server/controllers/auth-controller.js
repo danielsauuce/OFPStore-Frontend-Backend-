@@ -45,14 +45,14 @@ export const registerUser = async (req, res) => {
       refreshToken,
     });
   } catch (error) {
-    logger.error('Registration error occurred:', { 
-      message: error.message, 
-      stack: error.stack 
+    logger.error('Registration error occurred:', {
+      message: error.message,
+      stack: error.stack,
     });
     res.status(500).json({
       success: false,
       message: 'Something went wrong',
-      ...(process.env.NODE_ENV === 'development' && { error: error.message })
+      ...(process.env.NODE_ENV === 'development' && { error: error.message }),
     });
   }
 };
@@ -108,14 +108,14 @@ export const loginUser = async (req, res) => {
       },
     });
   } catch (error) {
-    logger.error('Login error occurred:', { 
-      message: error.message, 
-      stack: error.stack 
+    logger.error('Login error occurred:', {
+      message: error.message,
+      stack: error.stack,
     });
     res.status(500).json({
       success: false,
       message: 'Something went wrong',
-      ...(process.env.NODE_ENV === 'development' && { error: error.message })
+      ...(process.env.NODE_ENV === 'development' && { error: error.message }),
     });
   }
 };
