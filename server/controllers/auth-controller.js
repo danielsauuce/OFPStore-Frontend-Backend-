@@ -7,7 +7,7 @@ export const registerUser = async (req, res) => {
   logger.info('Registration endpoint hit');
 
   try {
-    const { error } = registerValidation(req.body);
+    const { error } = registerValidation.validate(req.body);
 
     if (error) {
       logger.warn('Validation error', error.details[0].message);
@@ -34,23 +34,25 @@ export const registerUser = async (req, res) => {
       password,
     });
     await user.save();
-    logger.warn('User saved successfully', user._id);
+    logger.info('User saved successfully', { userId: user._id });
 
     const { accessToken, refreshToken } = await generateTokens(user);
 
-    if (user) {
-      return res.status(201).json({
-        success: true,
-        message: 'User registered successfully',
-        accessToken,
-        refreshToken,
-      });
-    }
+    return res.status(201).json({
+      success: true,
+      message: 'User registered successfully',
+      accessToken,
+      refreshToken,
+    });
   } catch (error) {
-    logger.error('Registration error occur');
+    logger.error('Registration error occurred:', { 
+      message: error.message, 
+      stack: error.stack 
+    });
     res.status(500).json({
       success: false,
       message: 'Something went wrong',
+      ...(process.env.NODE_ENV === 'development' && { error: error.message })
     });
   }
 };
@@ -59,7 +61,7 @@ export const loginUser = async (req, res) => {
   logger.info('Login endpoint hit');
 
   try {
-    const { error } = loginValidation(req.body);
+    const { error } = loginValidation.validate(req.body);
 
     if (error) {
       logger.warn('Validation error', error.details[0].message);
@@ -89,7 +91,7 @@ export const loginUser = async (req, res) => {
       });
     }
 
-    logger.info('User logged in successfully', user._id);
+    logger.info('User logged in successfully', { userId: user._id });
 
     const { accessToken, refreshToken } = await generateTokens(user);
 
@@ -106,12 +108,14 @@ export const loginUser = async (req, res) => {
       },
     });
   } catch (error) {
-    logger.error('Login error occur', error.message);
+    logger.error('Login error occurred:', { 
+      message: error.message, 
+      stack: error.stack 
+    });
     res.status(500).json({
       success: false,
       message: 'Something went wrong',
+      ...(process.env.NODE_ENV === 'development' && { error: error.message })
     });
   }
 };
-
-export default { registerUser, loginUser };

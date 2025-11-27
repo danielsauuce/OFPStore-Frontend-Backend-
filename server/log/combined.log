@@ -29,3 +29,23 @@
 {"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:08:02.684Z"}
 {"level":"info","message":"Registration endpoint hit","service":"server","timestamp":"2025-11-27T22:08:02.686Z"}
 {"level":"error","message":"Registration error occur","service":"server","timestamp":"2025-11-27T22:08:02.686Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:13:10.845Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:14:05.451Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:15:11.911Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:16:36.683Z"}
+{"level":"info","message":"Received POST request to /auth/register","service":"server","timestamp":"2025-11-27T22:16:42.272Z"}
+{"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:16:42.273Z"}
+{"level":"info","message":"Registration endpoint hit","service":"server","timestamp":"2025-11-27T22:16:42.275Z"}
+{"level":"info","message":"User saved successfully","service":"server","timestamp":"2025-11-27T22:16:42.568Z","userId":"6928cdca7a630bcdadd3e730"}
+{"level":"info","message":"Received POST request to /auth/register","service":"server","timestamp":"2025-11-27T22:17:48.154Z"}
+{"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:17:48.155Z"}
+{"level":"info","message":"Registration endpoint hit","service":"server","timestamp":"2025-11-27T22:17:48.155Z"}
+{"level":"warn","message":"User already exists","service":"server","timestamp":"2025-11-27T22:17:48.183Z"}
+{"level":"info","message":"Received POST request to /auth/register","service":"server","timestamp":"2025-11-27T22:17:59.497Z"}
+{"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:17:59.499Z"}
+{"level":"info","message":"Registration endpoint hit","service":"server","timestamp":"2025-11-27T22:17:59.499Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"8","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"server","timestamp":"2025-11-27T22:17:59.502Z"}
+{"level":"info","message":"Received POST request to /auth/register","service":"server","timestamp":"2025-11-27T22:18:06.546Z"}
+{"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:18:06.547Z"}
+{"level":"info","message":"Registration endpoint hit","service":"server","timestamp":"2025-11-27T22:18:06.547Z"}
+{"level":"warn","message":"User already exists","service":"server","timestamp":"2025-11-27T22:18:06.571Z"}

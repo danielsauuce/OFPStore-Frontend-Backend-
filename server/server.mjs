@@ -8,6 +8,7 @@ import helmet from 'helmet';
 import cors from 'cors';
 import corsOptions from './config/corsOptions.mjs';
 import authRoutes from './routes/auth-route.js';
+import { RateLimiterRedis } from 'rate-limiter-flexible';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
