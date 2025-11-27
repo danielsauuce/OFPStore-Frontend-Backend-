@@ -1,4 +1,4 @@
-import { winston } from 'winston';
+import winston from 'winston';
 
 const logger = winston.createLogger({
   level: process.env.NODE_ENV === 'production' ? 'info' : 'debug',
@@ -8,14 +8,14 @@ const logger = winston.createLogger({
     winston.format.splat(),
     winston.format.json(),
   ),
-  defaultMeta: { service: 'identity-service' },
+  defaultMeta: { service: 'server' },
   transports: [
     new winston.transports.Console({
       format: winston.format.combine(winston.format.colorize(), winston.format.simple()),
     }),
-    new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' }),
+    new winston.transports.File({ filename: 'log/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'log/combined.log' }),
   ],
 });
 
-module.exports = logger;
+export default logger;
