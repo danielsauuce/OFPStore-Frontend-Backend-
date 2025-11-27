@@ -49,3 +49,25 @@
 {"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:18:06.547Z"}
 {"level":"info","message":"Registration endpoint hit","service":"server","timestamp":"2025-11-27T22:18:06.547Z"}
 {"level":"warn","message":"User already exists","service":"server","timestamp":"2025-11-27T22:18:06.571Z"}
+{"level":"info","message":"Received POST request to /auth/login","service":"server","timestamp":"2025-11-27T22:24:06.226Z"}
+{"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:24:06.227Z"}
+{"level":"info","message":"Received POST request to /auth/register","service":"server","timestamp":"2025-11-27T22:24:20.797Z"}
+{"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:24:20.797Z"}
+{"level":"info","message":"Registration endpoint hit","service":"server","timestamp":"2025-11-27T22:24:20.797Z"}
+{"level":"warn","message":"User already exists","service":"server","timestamp":"2025-11-27T22:24:20.821Z"}
+{"level":"info","message":"Received POST request to /auth/register","service":"server","timestamp":"2025-11-27T22:26:32.394Z"}
+{"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:26:32.394Z"}
+{"level":"info","message":"Registration endpoint hit","service":"server","timestamp":"2025-11-27T22:26:32.394Z"}
+{"level":"error","message":"E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }","service":"server","stack":"MongoServerError: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }\n    at InsertOneOperation.handleOk (/Users/adex__/Desktop/Olayinka Furniture Palace/server/node_modules/mongoose/node_modules/mongodb/lib/operations/insert.js:51:19)\n    at tryOperation (/Users/adex__/Desktop/Olayinka Furniture Palace/server/node_modules/mongoose/node_modules/mongodb/lib/operations/execute_operation.js:214:34)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async executeOperation (/Users/adex__/Desktop/Olayinka Furniture Palace/server/node_modules/mongoose/node_modules/mongodb/lib/operations/execute_operation.js:78:16)\n    at async Collection.insertOne (/Users/adex__/Desktop/Olayinka Furniture Palace/server/node_modules/mongoose/node_modules/mongodb/lib/collection.js:154:16)","timestamp":"2025-11-27T22:26:32.607Z"}
+{"level":"info","message":"Received GET request to /auth/login","service":"server","timestamp":"2025-11-27T22:30:00.045Z"}
+{"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:30:00.045Z"}
+{"level":"info","message":"Login endpoint hit","service":"server","timestamp":"2025-11-27T22:30:00.046Z"}
+{"0":"\"","1":"f","10":" ","11":"i","12":"s","13":" ","14":"n","15":"o","16":"t","17":" ","18":"a","19":"l","2":"u","20":"l","21":"o","22":"w","23":"e","24":"d","3":"l","4":"l","5":"n","6":"a","7":"m","8":"e","9":"\"","level":"warn","message":"Validation error","service":"server","timestamp":"2025-11-27T22:30:00.047Z"}
+{"level":"info","message":"Received GET request to /auth/login","service":"server","timestamp":"2025-11-27T22:30:56.805Z"}
+{"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:30:56.806Z"}
+{"level":"info","message":"Login endpoint hit","service":"server","timestamp":"2025-11-27T22:30:56.806Z"}
+{"level":"warn","message":"User not found","service":"server","timestamp":"2025-11-27T22:30:56.832Z"}
+{"level":"info","message":"Received GET request to /auth/login","service":"server","timestamp":"2025-11-27T22:31:10.851Z"}
+{"level":"info","message":"Request body, [object Object]","service":"server","timestamp":"2025-11-27T22:31:10.851Z"}
+{"level":"info","message":"Login endpoint hit","service":"server","timestamp":"2025-11-27T22:31:10.851Z"}
+{"level":"info","message":"User logged in successfully","service":"server","timestamp":"2025-11-27T22:31:10.954Z","userId":"6928cdca7a630bcdadd3e730"}
