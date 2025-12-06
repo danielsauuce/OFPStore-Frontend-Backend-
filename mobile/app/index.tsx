@@ -1,4 +1,4 @@
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, Text, View, Image } from 'react-native';
 import '../global.css';
 import { ArrowRight, ShoppingBag, Star } from 'lucide-react-native';
 import { useRouter } from 'expo-router';
@@ -34,8 +34,17 @@ export default function Index() {
                 <ArrowRight size={18} className="text-light-primary" />
               </View>
             </View>
+            <Image
+              source={{
+                uri: 'https://i.pinimg.com/1200x/78/18/45/781845e16c300760d3ad9c17bc5994a6.jpg',
+              }}
+              className="w-36 h-full"
+            />
           </View>
         </View>
+
+        {/* Featured Collection */}
+        <View className="border border-red-500 px-5 py-6 mt-5"></View>
       </ScrollView>
     </View>
   );
