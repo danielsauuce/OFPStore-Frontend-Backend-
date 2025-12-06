@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import { Colors } from '@/constants/colors';
-import { Home, ShoppingBag, ShoppingCart, User, Headphones } from 'lucide-react-native';
+import { Home, ShoppingBag, Store, User, MessageCircle } from 'lucide-react-native';
 
 export default function TabsLayout() {
   return (
@@ -28,7 +28,7 @@ export default function TabsLayout() {
         name="shop"
         options={{
           title: 'Shop',
-          tabBarIcon: ({ color, size }) => <ShoppingBag color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => <Store color={color} size={size} />,
         }}
       />
 
@@ -36,7 +36,7 @@ export default function TabsLayout() {
         name="cart"
         options={{
           title: 'Cart',
-          tabBarIcon: ({ color, size }) => <ShoppingCart color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => <ShoppingBag color={color} size={size} />,
         }}
       />
 
@@ -44,7 +44,7 @@ export default function TabsLayout() {
         name="support"
         options={{
           title: 'Support',
-          tabBarIcon: ({ color, size }) => <Headphones color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => <MessageCircle color={color} size={size} />,
         }}
       />
 
