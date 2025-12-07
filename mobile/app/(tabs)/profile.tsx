@@ -5,10 +5,12 @@ import { useRouter } from 'expo-router';
 
 export default function ProfileScreen() {
   return (
-    <View>
-      <Text>Profile Screen</Text>
-      <Text>Profile Screen</Text>
-      <Text>Profile Screen</Text>
+    <View className="min-h-screen bg-light-background">
+      <View className="px-5 ">
+        <Text>Profile Screen</Text>
+        <Text>Profile Screen</Text>
+        <Text>Profile Screen</Text>
+      </View>
     </View>
   );
 }
