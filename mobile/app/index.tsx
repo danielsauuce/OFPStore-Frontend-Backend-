@@ -6,7 +6,7 @@ export default function Index() {
     <View className="min-h-screen bg-[#FDFBF7]">
       <ScrollView showsVerticalScrollIndicator={false}>
         <View className="px-5 pt-5 pb-3 items-center">
-          <Text className="text-3xl">olayinka</Text>
+          <Text className="text-3xl"> olayinka </Text>
         </View>
       </ScrollView>
     </View>
