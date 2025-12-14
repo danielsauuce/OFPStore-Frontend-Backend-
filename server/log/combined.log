@@ -41,3 +41,44 @@
 {"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T23:52:51.422Z"}
 {"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-11-27T23:52:51.445Z"}
 {"level":"info","message":"MongoDB connected successfully","service":"server","timestamp":"2025-11-27T23:52:52.116Z"}
+{"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-11-28T02:37:57.151Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-28T02:37:57.201Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:37:57.252Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:37:57.308Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:37:57.413Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:37:57.574Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:37:57.782Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:37:58.038Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:37:58.367Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:37:58.724Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"server","timestamp":"2025-11-28T02:37:59.031Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:37:59.126Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:37:59.583Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:00.089Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:00.642Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:01.248Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:01.902Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:02.608Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:03.363Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:04.170Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:05.025Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:05.935Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:06.891Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:07.897Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:08.952Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:10.059Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:11.216Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:12.425Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:13.680Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:14.985Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:16.344Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:17.748Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:19.201Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:20.703Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:22.258Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:23.863Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:25.517Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:27.219Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:28.974Z"}
+{"error":"","level":"error","message":"Redis Client Error:","service":"server","timestamp":"2025-11-28T02:38:30.776Z"}
+{"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-11-28T02:38:32.637Z"}
