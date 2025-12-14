@@ -1,12 +1,24 @@
-import { View, Text } from 'react-native';
-import React from 'react';
+import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Colors } from '@/constants/colors';
+import React from 'react';
 
-const SafeScreen = ({ children }) => {
-  const insects = useSafeAreaInsets();
+type SafeScreenProps = {
+  children: React.ReactNode;
+};
+
+const SafeScreen = ({ children }: SafeScreenProps) => {
+  const insets = useSafeAreaInsets();
+
   return (
-    <View style={{ paddingTop: insects.top, backgroundColor: Colors.light.primary }}>
+    <View
+      className="flex-1 bg-primary"
+      style={{
+        paddingTop: insets.top,
+        paddingBottom: insets.bottom,
+        paddingLeft: insets.left,
+        paddingRight: insets.right,
+      }}
+    >
       {children}
     </View>
   );
