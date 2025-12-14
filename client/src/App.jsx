@@ -7,6 +7,7 @@ import About from './views/About';
 import Contact from './views/Contact';
 import AuthPage from './views/AuthPage';
 import NotFound from './views/NotFound';
+import AdminLayout from './views/admin/AdminLayout';
 
 // Layout component for pages with Navbar & Footer
 const MainLayout = () => (
@@ -24,6 +25,7 @@ function App() {
     <Routes>
       {/* Routes without Navbar/Footer */}
       <Route path="/auth" element={<AuthPage />} />
+      <Route path="/admin" element={<AdminLayout />} />
 
       {/* Routes with Navbar/Footer */}
       <Route element={<MainLayout />}>
