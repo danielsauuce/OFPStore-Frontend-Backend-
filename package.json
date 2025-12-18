@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7"
+  },
+  "scripts": {
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "client/**/*.{js,jsx,ts,tsx,json,css,md}": [
+      "cd client && npm run format",
+      "cd client && npm run lint"
+    ],
+    "server/**/*.{js,ts,tsx,json,md}": [
+      "cd server && npm run format",
+      "cd server && npm run lint"
+    ]
+  }
+}
