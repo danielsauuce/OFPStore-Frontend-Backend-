@@ -8,10 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "server.mjs",
     "dev": "nodemon server.mjs",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",

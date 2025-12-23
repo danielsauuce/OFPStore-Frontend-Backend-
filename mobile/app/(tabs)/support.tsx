@@ -1,0 +1,12 @@
+import React from 'react';
+import { View, Text } from 'react-native';
+
+export default function SupportScreen() {
+  return (
+    <View>
+      <Text>Support Screen</Text>
+      <Text>Support Screen</Text>
+      <Text>Support Screen</Text>
+    </View>
+  );
+}

@@ -2,7 +2,7 @@ import redisClientModule from '../config/redisClient.js';
 import logger from '../utils/logger.js';
 
 const rateLimiterMiddleware = async (req, res, next) => {
-  const rateLimiter = redisClientModule.rateLimiter; 
+  const rateLimiter = redisClientModule.rateLimiter;
 
   if (!rateLimiter) {
     logger.warn('Rate limiter not available, skipping');
