@@ -15,3 +15,15 @@
 {"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-12-23T04:00:18.243Z"}
 {"level":"info","message":"MongoDB connected successfully","service":"server","timestamp":"2025-12-23T04:00:19.101Z"}
 {"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-12-23T04:02:47.439Z"}
+{"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-12-24T09:56:59.536Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-12-24T09:56:59.587Z"}
+{"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-12-24T09:56:59.600Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"server","timestamp":"2025-12-24T09:57:00.641Z"}
+{"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-12-24T09:59:01.054Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-12-24T09:59:01.102Z"}
+{"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-12-24T09:59:01.129Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"server","timestamp":"2025-12-24T09:59:02.139Z"}
+{"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-12-24T10:15:21.663Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-12-24T10:15:21.748Z"}
+{"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-12-24T10:15:21.802Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"server","timestamp":"2025-12-24T10:15:23.219Z"}
