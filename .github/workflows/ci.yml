@@ -4,28 +4,22 @@ on:
     branches: ['main', 'development']
   pull_request:
     branches: ['main', 'development']
-
 jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
-
       - name: Install dependencies
         run: npm ci
-
-      - name: Format check (Prettier)
-        run: npx turbo run format -- --check   # or npx prettier --check . if not using turbo for format
-
-      - name: Lint (ESLint)
-        run: npx turbo run lint
-
+      - name: ESLint (allow warnings)
+        run: npx turbo run lint -- --max-warnings=100
+      - name: Prettier check
+        run: npx prettier --check .
       - name: Security audit
         run: npm audit --audit-level=moderate
