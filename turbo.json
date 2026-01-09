@@ -9,24 +9,26 @@
     "format": {
       "outputs": []
     },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
     "dev": {
       "cache": false,
       "persistent": true
     },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
     "test": {
       "dependsOn": ["^build"],
       "outputs": ["coverage/**"],
-      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"]
+      "inputs": ["src/**/*.js", "src/**/*.jsx"]
     },
     "clean": {
       "cache": false
     },
     "type-check": {
+      "cache": false,
       "dependsOn": ["^type-check"],
       "outputs": []
+      
     }
   }
 }
