@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { furnitureItems } from '../data/furnitureItems';
+import { furnitureItems } from '../data/FurnitureItems';
 
 import CategoryFilter from '../components/CategoryFilter';
 import PriceRangeFilter from '../components/PriceRangeFilter';
