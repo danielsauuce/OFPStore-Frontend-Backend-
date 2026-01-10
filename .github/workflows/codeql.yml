@@ -2,11 +2,11 @@ name: CodeQL Advanced
 
 on:
   push:
-    branches: ['main', 'development']
+    branches: ["main", "development"]
   pull_request:
-    branches: ['main', 'development']
+    branches: ["main", "development"]
   schedule:
-    - cron: '42 11 * * 6'  # Weekly scan
+    - cron: "42 11 * * 6" # Weekly scan
 
 jobs:
   analyze:
@@ -21,7 +21,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ['javascript-typescript']
+        language: ["javascript-typescript"]
 
     steps:
       - name: Checkout repository
@@ -45,4 +45,4 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:
-          category: '/language:${{ matrix.language }}'
+          category: "/language:${{ matrix.language }}"
