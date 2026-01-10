@@ -2,7 +2,8 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 function Hero() {
-  const heroImage = '/Heroimg.avif';
+  const heroImage =
+    'https://images.unsplash.com/photo-1549187774-b4e9b0445b41?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGZ1cm5pdHVyZXN8ZW58MHx8MHx8fDA%3D';
 
   return (
     <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
