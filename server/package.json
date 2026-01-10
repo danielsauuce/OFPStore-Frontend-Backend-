@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "server.mjs",
+    "start": " node server.mjs",
     "dev": "nodemon server.mjs",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings=100",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
