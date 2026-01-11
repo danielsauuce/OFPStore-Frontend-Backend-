@@ -10,7 +10,7 @@ let rateLimiter;
 try {
   const connectionString = process.env.REDIS_URL;
   if (!connectionString) {
-    throw new Error('REDIS_URL environment variable is not set. Required for Upstash.');
+    throw new Error('REDIS_URL environment variable is not set.');
   }
 
   redisClient = new Redis(connectionString, {

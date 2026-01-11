@@ -4,8 +4,7 @@
   "private": true,
   "workspaces": [
     "client",
-    "server",
-    "mobile"
+    "server"
   ],
   "scripts": {
     "build": "turbo run build",
