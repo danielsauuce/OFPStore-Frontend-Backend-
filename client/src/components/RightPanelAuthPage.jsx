@@ -10,11 +10,13 @@ const RightPanelAuthPage = () => {
       <div className="w-full max-w-md space-y-8">
         {/* Mobile Logo */}
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <Sparkles className="h-6 w-6 text-primary" />
-            <span className="text-2xl font-serif font-bold text-primary">Olayinka</span>
+          <div className="lg:hidden">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <Sparkles className="h-6 w-6 text-primary" />
+              <span className="text-2xl font-serif font-bold text-primary">Olayinka</span>
+            </div>
+            <p className="text-muted-foreground text-sm mb-5">Furniture Palace</p>
           </div>
-          <p className="text-muted-foreground text-sm mb-5">Furniture Palace</p>
 
           <div className="text-center lg:text-left">
             <h2 className="text-3xl font-serif font-bold text-foreground mb-2">
