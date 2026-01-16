@@ -1,7 +1,6 @@
 const corsOptions = {
   origin: (origin, callback) => {
-    // const allowedOrigins = ['http://localhost:5173', process.env.CLIENT_URL].filter(Boolean);
-    const allowedOrigins = ['http://localhost:5173'];
+    const allowedOrigins = process.env.CLIENT_URL;
 
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
