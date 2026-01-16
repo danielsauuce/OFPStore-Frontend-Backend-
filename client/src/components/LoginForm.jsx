@@ -1,37 +1,70 @@
+import { ArrowRight, Lock, Mail } from 'lucide-react';
 import React from 'react';
+
+const LoginInputFields = [
+  {
+    id: 'login-email',
+    name: 'email',
+    label: 'Email',
+    type: 'email',
+    placeholder: 'you@example.com',
+    icon: Mail,
+  },
+  {
+    id: 'login-password',
+    name: 'password',
+    label: 'Password',
+    type: 'password',
+    placeholder: '••••••••',
+    icon: Lock,
+  },
+];
 
 const LoginForm = () => {
   return (
     <form className="space-y-7 w-full mt-4 p-3">
-      <div>
-        <label className="block text-2xl font-medium text-card-foreground mb-1">Email</label>
-        <input
-          type="email"
-          placeholder="your@example.com"
-          required
-          className="w-full border border-border rounded bg-background px-5 py-3 focus:outline-none focus:ring-2 focus:ring-primary md:text-sm md:font-light"
-        />
-      </div>
+      {LoginInputFields.map((field) => {
+        const Icon = field.icon;
 
-      <div className="flex flex-col">
-        <label className="block text-2xl font-medium text-card-foreground mb-1">Password</label>
-        <input
-          type="password"
-          placeholder="********"
-          required
-          className="w-full border border-border rounded bg-background px-5 py-3 focus:outline-none focus:ring-2 focus:ring-primary md:text-sm md:font-light"
-        />
+        return (
+          <div key={field.id} className="space-y-2">
+            <label htmlFor={field.id} className="text-foreground font-medium">
+              {field.label}
+            </label>
 
-        <button className="self-end mt-9 cursor-pointer text-primary hover:underline transition-colors duration-200 hover:text-primary-light">
-          Forget password?
+            <div className="relative">
+              <Icon className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+
+              <input
+                id={field.id}
+                name={field.name}
+                type={field.type}
+                placeholder={field.placeholder}
+                required
+                className="w-full h-12 pl-12 pr-4 rounded-md bg-muted/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:bg-card transition-colors"
+              />
+            </div>
+          </div>
+        );
+      })}
+
+      <div className="flex items-center justify-end">
+        <button
+          type="button"
+          className="text-sm text-primary hover:text-primary-light transition-colors"
+        >
+          Forgot password?
         </button>
       </div>
 
       <button
         type="submit"
-        className="w-full items-center p-3 mt-7 font-medium rounded-3xl bg-primary text-primary-foreground text-2xl focus:ring-2 focus:ring-primary-light md:font-medium transition-colors hover:bg-primary-light"
+        className="w-full h-13 text-amber-50 font-medium bg-primary hover:bg-primary-dark transition-all duration-300 group justify-center flex"
       >
-        Login
+        <span className="flex items-center gap-2">
+          Login
+          <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+        </span>
       </button>
     </form>
   );

@@ -1,42 +1,80 @@
 import React from 'react';
+import { User, Mail, Lock, ArrowRight } from 'lucide-react';
+
+const signupFields = [
+  {
+    id: 'signup-name',
+    name: 'fullName',
+    label: 'Full Name',
+    type: 'text',
+    placeholder: 'John Doe',
+    icon: User,
+  },
+  {
+    id: 'signup-email',
+    name: 'email',
+    label: 'Email Address',
+    type: 'email',
+    placeholder: 'you@example.com',
+    icon: Mail,
+  },
+  {
+    id: 'signup-password',
+    name: 'password',
+    label: 'Password',
+    type: 'password',
+    placeholder: '••••••••',
+    icon: Lock,
+  },
+];
 
 const SignUpForm = () => {
   return (
-    <form className="space-y-7 w-full mt-4 p-3">
-      <div>
-        <label className="block text-2xl font-medium text-card-foreground mb-1">Full Name</label>
-        <input
-          type="text"
-          placeholder="Enter your full name"
-          className="w-full border border-border rounded bg-background px-5 py-3 focus:outline-none focus:ring-2 focus:ring-primary md:text-sm md:font-light"
-        />
-      </div>
+    <form className="space-y-5">
+      {signupFields.map((field) => {
+        const Icon = field.icon;
 
-      <div>
-        <label className="block text-2xl font-medium text-card-foreground mb-1">Email</label>
-        <input
-          type="email"
-          placeholder="your@example.com"
-          required
-          className="w-full border border-border rounded bg-background px-5 py-3 focus:outline-none focus:ring-2 focus:ring-primary md:text-sm md:font-light"
-        />
-      </div>
+        return (
+          <div key={field.id} className="space-y-2">
+            <label htmlFor={field.id} className="text-foreground font-medium">
+              {field.label}
+            </label>
 
-      <div>
-        <label className="block text-2xl font-medium text-card-foreground mb-1">Password</label>
-        <input
-          type="password"
-          placeholder="********"
-          className="w-full border border-border rounded bg-background px-5 py-3 focus:outline-none focus:ring-2 focus:ring-primary md:text-sm md:font-light"
-        />
-      </div>
+            <div className="relative">
+              <Icon className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+
+              <input
+                id={field.id}
+                type={field.type}
+                placeholder={field.placeholder}
+                required
+                className=" w-full h-12 pl-12 pr-4 rounded-md bg-muted/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:bg-card transition-colors"
+              />
+            </div>
+          </div>
+        );
+      })}
 
       <button
         type="submit"
-        className="w-full items-center p-3 mt-7 font-medium rounded-3xl bg-primary text-primary-foreground text-2xl focus:ring-2 focus:ring-primary-light md:font-medium transition-colors hover:bg-primary-light"
+        className="w-full h-13 text-amber-50 font-medium bg-primary hover:bg-primary-dark transition-all duration-300 group justify-center flex"
       >
-        Sign Up
+        <span className="flex items-center gap-2">
+          Create Account
+          <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+        </span>
       </button>
+
+      <p className="text-center text-sm text-muted-foreground">
+        By signing up, you agree to our{' '}
+        <a href="#" className="text-primary hover:underline">
+          Terms{' '}
+        </a>
+        and{' '}
+        <a href="#" className="text-primary hover:underline">
+          Privacy Policy
+        </a>
+      </p>
     </form>
   );
 };
