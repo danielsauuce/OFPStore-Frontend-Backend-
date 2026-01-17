@@ -6,7 +6,7 @@ export async function registerUser(formData) {
     email,
     password,
     role: 'user',
-  }
+  };
   const data = await axiosInstance.post('/auth/register', formData);
   console.log(data);
 
@@ -14,7 +14,7 @@ export async function registerUser(formData) {
 }
 
 export async function loginUser(formData) {
-  const formData =  { email, password, role: 'user' }
+  const formData = { email, password, role: 'user' };
   const data = await axiosInstance.get('/auth/login', formData);
   console.log(data);
 

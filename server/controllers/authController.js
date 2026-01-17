@@ -2,6 +2,7 @@ import User from '../models/user.mjs';
 import generateTokens from '../utils/generateToken.js';
 import logger from '../utils/logger.js';
 import { registerValidation, loginValidation } from '../utils/userValidation.js';
+import arcjet, { shield, detectBot, tokenBucket } from '@arcjet/node';
 
 export const registerUser = async (req, res) => {
   logger.info('Registration endpoint hit');
@@ -17,7 +18,7 @@ export const registerUser = async (req, res) => {
       });
     }
 
-    const { fullname, email, password } = req.body;
+    const { fullName, email, password } = req.body;
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -29,7 +30,7 @@ export const registerUser = async (req, res) => {
     }
 
     const user = new User({
-      fullname,
+      fullName,
       email,
       password,
     });
@@ -91,6 +92,10 @@ export const loginUser = async (req, res) => {
       });
     }
 
+    // last login updated
+    user.lastLogin = new Date();
+    await user.save();
+
     logger.info('User logged in successfully', { userId: user._id });
 
     const { accessToken, refreshToken } = await generateTokens(user);
@@ -102,7 +107,7 @@ export const loginUser = async (req, res) => {
       refreshToken,
       user: {
         id: user._id,
-        fullname: user.fullname,
+        fullName: user.fullName,
         email: user.email,
         role: user.role,
       },
