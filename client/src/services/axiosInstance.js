@@ -1,0 +1,27 @@
+import axios from 'axios';
+
+const BASE_URL = import.meta.env.VITE_BACKEND_DEV_URL;
+
+const axiosInstance = axios.create({
+  baseURL: BASE_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+
+  withCredentials: true,
+});
+
+axiosInstance.interceptors.request.use(
+  (config) => {
+    const accessToken = sessionStorage.getItem('accesstoken');
+
+    if (accessToken) {
+      config.headers.Authorization = `Bearer ${accessToken}`;
+    }
+
+    return config;
+  },
+  (error) => Promise.reject(error),
+);
+
+export default axiosInstance;
