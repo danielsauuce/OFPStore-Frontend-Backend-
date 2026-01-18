@@ -2,10 +2,10 @@ import redisClientModule from '../config/redisClient.js';
 import logger from '../utils/logger.js';
 
 const rateLimiterMiddleware = async (req, res, next) => {
-  const rateLimiter = redisClientModule.rateLimiter;
+  const { rateLimiter } = redisClientModule;
 
   if (!rateLimiter) {
-    logger.warn('Rate limiter not available, skipping');
+    logger.warn('Rate limiter not initialized (Redis unavailable), skipping for this request');
     return next();
   }
 
@@ -18,7 +18,7 @@ const rateLimiterMiddleware = async (req, res, next) => {
       : 60;
 
     res.set('Retry-After', String(retrySecs));
-    logger.warn(`Rate limit exceeded for IP ${req.ip}`);
+    logger.warn(`Rate limit exceeded for IP ${req.ip} - Retry after ${retrySecs}s`);
     res.status(429).json({
       success: false,
       message: 'Too many requests, please try again later',

@@ -4,13 +4,13 @@
   "private": true,
   "workspaces": [
     "client",
-    "server",
-    "mobile"
+    "server"
   ],
   "scripts": {
-    "dev": "turbo run dev",
     "build": "turbo run build",
-    "lint": "turbo run lint",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint -- --max-warnings=100",
+    "lint:fix": "turbo run lint -- --fix",
     "clean": "turbo run clean",
     "test": "turbo run test",
     "format": "turbo run format"
