@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { User, Mail, Lock, ArrowRight } from 'lucide-react';
 
 const signupFields = [
@@ -28,9 +28,18 @@ const signupFields = [
   },
 ];
 
-const SignUpForm = () => {
+const SignUpForm = ({ handleSignUp }) => {
+  const signUpFormData = { fullName: '', email: '', password: '' };
+  const [signup, setSignup] = useState(signUpFormData);
+
   return (
-    <form className="space-y-5">
+    <form
+      className="space-y-5"
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleSignUp(signup);
+      }}
+    >
       {signupFields.map((field) => {
         const Icon = field.icon;
 
@@ -46,9 +55,17 @@ const SignUpForm = () => {
               <input
                 id={field.id}
                 type={field.type}
+                name={field.name}
                 placeholder={field.placeholder}
                 required
-                className=" w-full h-12 pl-12 pr-4 rounded-md bg-muted/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:bg-card transition-colors"
+                className="w-full h-12 pl-12 pr-4 rounded-md bg-muted/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:bg-card transition-colors"
+                value={signup[field.name] || ''}
+                onChange={(e) => {
+                  setSignup((prev) => ({
+                    ...prev,
+                    [e.target.name]: e.target.value,
+                  }));
+                }}
               />
             </div>
           </div>

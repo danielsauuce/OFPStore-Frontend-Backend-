@@ -1,5 +1,5 @@
 import { ArrowRight, Lock, Mail } from 'lucide-react';
-import React from 'react';
+import { useState } from 'react';
 
 const LoginInputFields = [
   {
@@ -20,9 +20,18 @@ const LoginInputFields = [
   },
 ];
 
-const LoginForm = () => {
+const LoginForm = ({ handleLogin }) => {
+  const loginFormData = { email: '', password: '' };
+  const [signin, SetSignin] = useState(loginFormData);
+
   return (
-    <form className="space-y-7 w-full mt-4 p-3">
+    <form
+      className="space-y-7 w-full mt-4 p-3"
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleLogin(signin);
+      }}
+    >
       {LoginInputFields.map((field) => {
         const Icon = field.icon;
 
@@ -42,6 +51,8 @@ const LoginForm = () => {
                 placeholder={field.placeholder}
                 required
                 className="w-full h-12 pl-12 pr-4 rounded-md bg-muted/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:bg-card transition-colors"
+                value={signin[field.name]}
+                onChange={(e) => SetSignin({ ...signin, [e.target.name]: e.target.value })}
               />
             </div>
           </div>

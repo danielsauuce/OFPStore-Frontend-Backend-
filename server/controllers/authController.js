@@ -48,13 +48,13 @@ export const registerUser = async (req, res) => {
     await user.save();
     logger.info('User saved successfully', { userId: user._id });
 
-    // const { accessToken, refreshToken } = await generateTokens(user);
+    const { accessToken, refreshToken } = await generateTokens(user);
 
-    return res.status(201).json({
+    return res.status(200).json({
       success: true,
       message: 'User registered successfully',
-      // accessToken,
-      // refreshToken,
+      accessToken,
+      refreshToken,
     });
   } catch (error) {
     logger.error('Registration error occurred:', {

@@ -1,10 +1,29 @@
 import { Sparkles } from 'lucide-react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import SignUpForm from './SignUpForm';
 import LoginForm from './LoginForm';
+import { registerUser, loginUser } from '../services/authService';
+import toast from 'react-hot-toast';
 
 const RightPanelAuthPage = () => {
   const [isLogin, SetIsLogin] = useState(true);
+  const [isloading, SetiaLoading] = useState(false);
+
+  const handleLogin = () => {};
+
+  const handleSignUp = async (registerFormData) => {
+    try {
+      // if(isloading){
+      //   SetiaLoading(true)
+      // }
+
+      const response = registerUser(registerFormData);
+      console.log('register User', response);
+    } catch (error) {
+      console.log('Erro', error);
+    }
+  };
+
   return (
     <div className="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 bg-background">
       <div className="w-full max-w-md space-y-8">
@@ -56,7 +75,11 @@ const RightPanelAuthPage = () => {
           </button>
         </div>
 
-        {isLogin ? <LoginForm /> : <SignUpForm />}
+        {isLogin ? (
+          <LoginForm handleLogin={handleLogin} />
+        ) : (
+          <SignUpForm handleSignUp={handleSignUp} />
+        )}
       </div>
     </div>
   );

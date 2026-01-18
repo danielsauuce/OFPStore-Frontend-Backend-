@@ -1,29 +1,56 @@
 import axiosInstance from './axiosInstance';
 
 export async function registerUser(registerFormData) {
-  const { fullName, email, password } = registerFormData;
+  try {
+    const { fullName, email, password } = registerFormData;
 
-  const { data } = await axiosInstance.post('/api/auth/register', {
-    fullName,
-    email,
-    password,
-  });
+    const { data } = await axiosInstance.post('/api/auth/register', {
+      fullName,
+      email,
+      password,
+    });
 
-  return data;
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export async function loginUser(loginFormData) {
-  const { email, password } = loginFormData;
+  try {
+    const { email, password } = loginFormData;
 
-  const { data } = await axiosInstance.post('/api/auth/login', {
-    email,
-    password,
-  });
+    const { data } = await axiosInstance.post('/api/auth/login', {
+      email,
+      password,
+    });
 
-  return data;
+    //save token to sessionStorage
+    if (data.success && data.accessToken) {
+      sessionStorage.setItem('accesstoken', data.accessToken);
+    }
+
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export async function logoutUser() {
-  const { data } = await axiosInstance.post('/api/auth/logout');
-  return data;
+  try {
+    const { data } = await axiosInstance.post('/api/auth/logout');
+    sessionStorage.removeItem('accesstoken');
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function checkAuth() {
+  try {
+    const data = await axiosInstance.get('/api/auth/check-auth');
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 }
