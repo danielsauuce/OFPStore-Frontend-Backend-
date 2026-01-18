@@ -4,21 +4,32 @@ import SignUpForm from './SignUpForm';
 import LoginForm from './LoginForm';
 import { registerUser, loginUser } from '../services/authService';
 import toast from 'react-hot-toast';
+import { useAuth } from '../context/authContext';
+import { useNavigate } from 'react-router-dom';
 
 const RightPanelAuthPage = () => {
   const [isLogin, SetIsLogin] = useState(true);
   const [isloading, SetiaLoading] = useState(false);
+  const { signin, signUp } = useAuth();
 
-  const handleLogin = () => {};
+  const navigate = useNavigate();
+
+  const handleLogin = (loginFormData) => {
+    try {
+      const result = signin(loginFormData);
+      console.log('register User', result);
+
+      navigate('/');
+    } catch (error) {
+      console.log('Erro', error);
+    }
+  };
 
   const handleSignUp = async (registerFormData) => {
     try {
-      // if(isloading){
-      //   SetiaLoading(true)
-      // }
-
-      const response = registerUser(registerFormData);
-      console.log('register User', response);
+      const result = signUp(registerFormData);
+      console.log('register User', result);
+      navigate('/auth');
     } catch (error) {
       console.log('Erro', error);
     }

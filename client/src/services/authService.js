@@ -54,3 +54,10 @@ export async function checkAuth() {
     console.log(error);
   }
 }
+
+export async function changePassword(formData) {
+  const { currentPassword, newPassword } = formData;
+
+  const { data } = axiosInstance.post('/api/auth/reset-password', { currentPassword, newPassword });
+  return data;
+}
